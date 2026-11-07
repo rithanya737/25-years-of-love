@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>25 Years of Love | Rajesh & Chitra</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+
+.background {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 85% 15%, #4b0000 0%, transparent 40%),
+        radial-gradient(ellipse at 10% 80%, #260000 0%, transparent 40%),
+        #050505;
+    z-index: -2;
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 65px 45px;
+}
+
+/* TOP LABEL */
+
+.top-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #aaa;
+    margin-bottom: 65px;
+}
+
+.top-label span {
+    width: 30px;
+    height: 2px;
+    background: red;
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    min-height: 480px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(110px, 17vw, 185px);
+    font-weight: 400;
+    color: transparent;
+    -webkit-text-stroke: 1px #555;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.heading-text {
+    margin-left: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+.years {
+    font-family: 'Allura', cursive;
+    font-size: clamp(65px, 9vw, 110px);
+    line-height: 0.9;
+    color: white;
+}
+
+.love {
+    font-family: 'Allura', cursive;
+    font-size: clamp(65px, 9vw, 105px);
+    color: #ff102b;
+    line-height: 0.9;
+    margin-left: 30px;
+}
+
+.names {
+    margin-top: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 4vw, 40px);
+    letter-spacing: 3px;
+}
+
+.names span {
+    color: #ff1833;
+    font-family: 'Allura', cursive;
+    font-size: 40px;
+    margin: 0 12px;
+}
+
+.description {
+    margin-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #bbb;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 390px;
+}
+
+.dates {
+    margin-top: 38px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dates span {
+    color: red;
+    font-size: 23px;
+}
+
+/* INFINITY ART */
+
+.infinity-area {
+    position: relative;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infinity {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(180px, 25vw, 300px);
+    color: transparent;
+    -webkit-text-stroke: 2px #ff102b;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.orbit {
+    position: absolute;
+    width: 100%;
+    height: 230px;
+    border: 1px solid rgba(255, 0, 30, 0.35);
+    border-radius: 50%;
+    transform: rotate(-12deg);
+}
+
+.orbit.two {
+    transform: rotate(12deg);
+}
+
+.heart {
+    position: absolute;
+    color: #ff102b;
+    font-size: 22px;
+    animation: heartbeat 1.8s infinite;
+}
+
+.heart.one {
+    top: 20%;
+    left: 35%;
+}
+
+.heart.two {
+    bottom: 15%;
+    right: 20%;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff0022;
+    }
+    to {
+        text-shadow: 0 0 30px #ff0022;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+/* MUSIC PLAYER */
+
+.music-box {
+    margin-top: 38px;
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 18px;
+    background: rgba(255, 0, 30, 0.08);
+    border: 1px solid rgba(255, 0, 30, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 30, 0.08);
+}
+
+.play-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #ed1029;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.music-info p {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.music-info small {
+    color: #888;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.volume {
+    width: 65px;
+    accent-color: red;
+}
+
+audio {
+    display: none;
+}
+
+/* GALLERY SECTION */
+
+.gallery-section {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 10px;
+    color: #ff3348;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.gallery-title {
+    font-family: 'Allura', cursive;
+    font-size: clamp(45px, 7vw, 70px);
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.gallery-description {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 55px;
+}
+
+/* SPACIOUS FLOATING MEMORY WALL */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 35px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px 20px;
+    justify-items: center;
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    max-width: 210px;
+    height: 235px;
+    padding: 6px;
+
+    background: #151515;
+    border: 1px solid #383838;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+
+    overflow: hidden;
+
+    animation: gentleFloat 9s ease-in-out infinite;
+
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+/* STAGGERED ARRANGEMENT */
+
+.photo:nth-child(3n+1) {
+    margin-top: 0;
+}
+
+.photo:nth-child(3n+2) {
+    margin-top: 45px;
+}
+
+.photo:nth-child(3n) {
+    margin-top: -25px;
+}
+
+/* DIFFERENT FLOATING SPEEDS */
+
+.photo:nth-child(2n) {
+    animation-duration: 11s;
+}
+
+.photo:nth-child(3n) {
+    animation-duration: 13s;
+}
+
+.photo:nth-child(4n) {
+    animation-delay: -4s;
+}
+
+.photo:nth-child(5n) {
+    animation-delay: -7s;
+}
+
+/* PHOTO IMAGE */
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+/* HOVER EFFECT */
+
+.photo:hover {
+    transform: scale(1.08) !important;
+    border-color: #ff102b;
+    box-shadow: 0 0 30px rgba(255,0,30,0.35);
+    z-index: 10;
+}
+
+/* SLOW FLOATING EFFECT */
+
+@keyframes gentleFloat {
+
+    0%, 100% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-22px) rotate(2deg);
+    }
+
+}
+
+/* TABLET */
+
+@media(max-width: 750px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+@media(max-width: 380px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 12px;
+    }
+}
+
+@keyframes randomFloat {
+
+    0% {
+        transform: translate(0px, 0px) rotate(-5deg);
+    }
+
+    25% {
+        transform: translate(15px, -25px) rotate(4deg);
+    }
+
+    50% {
+        transform: translate(-20px, 15px) rotate(-3deg);
+    }
+
+    75% {
+        transform: translate(25px, 20px) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(-15px, -20px) rotate(-4deg);
+    }
+
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 2px solid #ff102b;
+    box-shadow: 0 0 35px rgba(255,0,30,0.3);
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+}
+
+/* LOVE MESSAGE */
+
+.message-section {
+    text-align: center;
+    margin: 130px auto 100px;
+    max-width: 750px;
+}
+
+.message-section h2 {
+    font-family: 'Allura', cursive;
+    font-size: 65px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.message-section p {
+    color: #aaa;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.9;
+}
+
+.message-heart {
+    color: #ff102b;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #292929;
+    text-align: center;
+    padding: 55px 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+footer h2 {
+    font-family: 'Allura', cursive;
+    font-size: clamp(40px, 7vw, 65px);
+    color: #ff203a;
+    font-weight: normal;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width: 750px) {
+
+    .container {
+        padding: 35px 20px;
+    }
+
+    .top-label {
+        margin-bottom: 45px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .heading-text {
+        margin-left: -25px;
+    }
+
+    .infinity-area {
+        height: 240px;
+    }
+
+    .infinity {
+        font-size: 200px;
+    }
+
+    .orbit {
+        height: 150px;
+    }
+
+    .photo {
+        width: 125px;
+        height: 145px;
+    }
+
+    .photo-gallery {
+        height: 1100px;
+    }
+
+    .gallery-section {
+        margin-top: 80px;
+    }
+
+    .message-section {
+        margin: 90px auto;
+    }
+
+    .message-section h2 {
+        font-size: 48px;
+    }
+
+    .message-section p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 380px) {
+
+    .photo {
+        width: 105px;
+        height: 125px;
+    }
+
+    .names {
+        font-size: 27px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+<canvas id="particles"></canvas>
+
+<main class="container">
+
+    <!-- TOP LABEL -->
+
+    <div class="top-label">
+        <span></span>
+        THE BEGINNING OF FOREVER
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="subtitle">A SILVER CELEBRATION</p>
+
+            <div class="heading">
+                <div class="number">25</div>
+
+                <div class="heading-text">
+                    <div class="years">Years</div>
+                    <div class="love">of Love</div>
+                </div>
+            </div>
+
+            <h1 class="names">
+                Rajesh <span>&</span> Chitra
+            </h1>
+
+            <p class="description">
+                A journey of togetherness, trust
+                and endless love.
+            </p>
+
+            <div class="dates">
+                21 NOVEMBER 2001
+                <span>∞</span>
+                21 NOVEMBER 2026
+            </div>
+
+            <!-- MUSIC PLAYER -->
+
+            <div class="music-box">
+
+                <button class="play-button"
+                        id="playButton"
+                        aria-label="Play music">
+                    ▶
+                </button>
+
+                <div class="music-info">
+                    <p>Our Special Song</p>
+                    <small>25 YEARS OF LOVE</small>
+                </div>
+
+                <input class="volume"
+                       id="volume"
+                       type="range"
+                       min="0"
+                       max="1"
+                       step="0.05"
+                       value="0.8"
+                       aria-label="Volume">
+
+            </div>
+
+            <!-- ORIGINAL MP3 PATH - UNCHANGED -->
+
+            <audio id="anniversaryAudio"
+                   src="music\Unakaga Poranthene Male Ringtone.mp3"
+                   autoplay
+                   preload="auto"
+                   loop>
+            </audio>
+
+        </div>
+
+        <!-- INFINITY DESIGN -->
+
+        <div class="infinity-area">
+
+            <div class="orbit"></div>
+            <div class="orbit two"></div>
+
+            <div class="infinity">∞</div>
+
+            <div class="heart one">♥</div>
+            <div class="heart two">♥</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHOTO GALLERY -->
+
+    <section class="gallery-section">
+
+        <p class="section-label">A COLLECTION OF MEMORIES</p>
+
+        <h2 class="gallery-title">
+            Every Picture Tells a Story
+        </h2>
+
+        <p class="gallery-description">
+            Twenty-five years of beautiful memories together.
+        </p>
+
+        <div class="photo-gallery">
+
+            <!-- ORIGINAL IMAGE PATHS - UNCHANGED -->
+
+            <div class="photo">
+                <img src="images/photo1.jpeg"
+                     alt="Memory 1"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo2.jpeg"
+                     alt="Memory 2"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo3.jpeg"
+                     alt="Memory 3"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo4.jpeg"
+                     alt="Memory 4"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo5.jpeg"
+                     alt="Memory 5"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo6.jpeg"
+                     alt="Memory 6"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo7.jpeg"
+                     alt="Memory 7"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo8.jpeg"
+                     alt="Memory 8"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo9.jpeg"
+                     alt="Memory 9"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo10.jpeg"
+                     alt="Memory 10"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo11.jpeg"
+                     alt="Memory 11"
+                     loading="lazy">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo12.jpeg"
+                     alt="Memory 12"
+                     loading="lazy">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANNIVERSARY MESSAGE -->
+
+    <section class="message-section">
+
+        <h2>
+            25 Years, Countless Memories
+        </h2>
+
+        <p>
+            From the day our journey began to all
+            the beautiful moments we've shared,
+            every year has been a story of love,
+            laughter, understanding and togetherness.
+            Twenty-five years later, the journey
+            continues, with countless memories
+            behind us and endless love ahead.
+        </p>
+
+        <div class="message-heart">♥</div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>Forever Together. Forever in Love.</h2>
+
+    <p>
+        HAPPY 25TH WEDDING ANNIVERSARY
+    </p>
+
+    <p>
+        RAJESH & CHITRA ♥
+    </p>
+
+    <p style="margin-top:25px;color:#555;">
+        21.11.2001 — 21.11.2026
+    </p>
+
+</footer>
+
+
+<!-- PHOTO LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <span class="close" id="closeLightbox">&times;</span>
+
+    <img id="lightboxImage" src="" alt="Expanded memory">
+
+</div>
+
+
+<script>
+
+/* MUSIC PLAYER */
+
+const audio = document.getElementById("anniversaryAudio");
+const playButton = document.getElementById("playButton");
+const volume = document.getElementById("volume");
+
+audio.volume = 0.8;
+
+/* ATTEMPT AUTOMATIC MUSIC PLAYBACK */
+
+async function startMusic() {
+
+    try {
+
+        await audio.play();
+        playButton.textContent = "Ⅱ";
+
+    } catch (error) {
+
+        console.log("Browser requires user interaction to play music.");
+        playButton.textContent = "▶";
+
+    }
+
+}
+
+window.addEventListener("load", startMusic);
+
+/* START MUSIC ON FIRST USER INTERACTION IF AUTOPLAY IS BLOCKED */
+
+function startOnInteraction() {
+
+    if (audio.paused) {
+        startMusic();
+    }
+
+    document.removeEventListener("click", startOnInteraction);
+    document.removeEventListener("touchstart", startOnInteraction);
+
+}
+
+document.addEventListener("click", startOnInteraction);
+document.addEventListener("touchstart", startOnInteraction);
+
+/* PLAY / PAUSE BUTTON */
+
+playButton.addEventListener("click", async () => {
+
+    if (audio.paused) {
+
+        await startMusic();
+
+    } else {
+
+        audio.pause();
+        playButton.textContent = "▶";
+
+    }
+
+});
+
+audio.addEventListener("play", () => {
+    playButton.textContent = "Ⅱ";
+});
+
+audio.addEventListener("pause", () => {
+    playButton.textContent = "▶";
+});
+
+volume.addEventListener("input", () => {
+    audio.volume = Number(volume.value);
+});
+
+
+
+/* PHOTO LIGHTBOX */
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+
+document.querySelectorAll(".photo img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        lightboxImage.src = img.src;
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+document.getElementById("closeLightbox").addEventListener("click", () => {
+    lightbox.classList.remove("active");
+});
+
+lightbox.addEventListener("click", event => {
+
+    if (event.target === lightbox) {
+        lightbox.classList.remove("active");
+    }
+
+});
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+        lightbox.classList.remove("active");
+    }
+
+});
+
+
+/* FLOATING RED PARTICLES */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+
+function resizeCanvas() {
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+}
+
+resizeCanvas();
+
+window.addEventListener("resize", resizeCanvas);
+
+for (let i = 0; i < 65; i++) {
+
+    particles.push({
+
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 2 + 0.5,
+        speed: Math.random() * 0.5 + 0.1,
+        opacity: Math.random() * 0.6 + 0.1
+
+    });
+
+}
+
+function animateParticles() {
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+
+        ctx.beginPath();
+
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+
+        ctx.fillStyle = `rgba(255, 20, 45, ${p.opacity})`;
+
+        ctx.fill();
+
+        p.y -= p.speed;
+
+        if (p.y < 0) {
+            p.y = canvas.height;
+            p.x = Math.random() * canvas.width;
+        }
+
+    });
+
+    requestAnimationFrame(animateParticles);
+
+}
+
+animateParticles();
+
+</script>
+
+</body>
+</html>
